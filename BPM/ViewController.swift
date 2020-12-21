@@ -39,7 +39,7 @@ extension ViewController {
     @objc func start() {
         bpmManager.recordTime()
         
-        bpmManager.calcBPM()
+        bpmManager.tempo()
         bpmManager.time()
         bpmManager.taps()
         
@@ -53,7 +53,7 @@ extension ViewController {
     }
     
     fileprivate func fillFields() {
-        guard let bpm = BPMManager.bpm else {
+        guard let bpm = bpmManager.bpm else {
             return
         }
         main.startBtn.setTitle(String(format: "%.2f", bpm.tempo), for: .normal)

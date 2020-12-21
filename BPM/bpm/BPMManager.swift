@@ -9,49 +9,51 @@ import Foundation
 
 class BPMManager {
     private static let MILLISECONDS_IN_A_MINUTE: Float = 60000.0
-    private(set) static var bpm: BPM?
+    private(set) var bpm: BPM?
     
     init() {
-        BPMManager.bpm = BPM.init()
+        self.bpm = BPM.init()
     }
     
     func recordTime() {
-        guard let bpm = BPMManager.bpm else {
-            return
+        if let bpm = self.bpm {
+            let curr = Int64(Date().timeIntervalSince1970 * 1000.0)
+            bpm.recordTimes(curr)
         }
-        let curr = Int64(Date().timeIntervalSince1970 * 1000.0)
-        bpm.times.append(curr)
     }
     
-    func calcBPM() {
-        guard let bpm = BPMManager.bpm, bpm.times.count >= 2 else {
-            return
+    func tempo() {
+        if let bpm = self.bpm {
+            bpm.countTempo(self.calcBPM())
         }
-        let dt = self.deltas()
-        bpm.tempo = self.calculateBPM(deltas: dt)
     }
     
     func time() {
-        guard let bpm = BPMManager.bpm else {
-            return
+        if let bpm = self.bpm {
+            bpm.countTime()
         }
-        let count = bpm.times.count
-        bpm.time = Float(bpm.times[count - 1] - bpm.times[0])
     }
     
     func taps() {
-        guard let bpm = BPMManager.bpm else {
-            return
+        if let bpm = self.bpm  {
+            bpm.countTaps()
         }
-        bpm.taps += 1
     }
     
     func clear() {
-        BPMManager.bpm = nil
+        self.bpm = nil
+    }
+    
+    fileprivate func calcBPM() -> Float {
+        guard let bpm = self.bpm, bpm.times.count >= 2 else {
+            return 0
+        }
+        let dt = self.deltas()
+        return self.calculateBPM(deltas: dt)
     }
     
     fileprivate func deltas() -> [Int64] {
-        guard let bpm = BPMManager.bpm else {
+        guard let bpm = self.bpm else {
             return []
         }
         var deltas: [Int64] = []
