@@ -29,7 +29,7 @@ extension ViewController {
     func setupViews() {
         main.startBtn.addTarget(self, action: #selector(start), for: .touchUpInside)
         main.resetBtn.addTarget(self, action: #selector(reset), for: .touchUpInside)
-        main.resetBtn.setTitle("Reset", for: .normal)
+        main.resetBtn.setTitle(NSLocalizedString("reset", comment: "Reset the counter."), for: .normal)
         resetFields()
     }
 }
@@ -57,16 +57,16 @@ extension ViewController {
             return
         }
         main.startBtn.setTitle(String(format: "%.2f", bpm.tempo), for: .normal)
-        main.tapsLbl.text = "Taps: \(bpm.taps)"
-        main.tempoLbl.text = "Tempo: \(String(format: "%.2f", bpm.tempo)) bpm"
-        main.timeLbl.text = "Time: \(String(format: "%.3f", (bpm.time/1000)))s"
+        main.tapsLbl.text = "\(NSLocalizedString("taps", comment: "Count taps.")): \(bpm.taps)"
+        main.tempoLbl.text = "\(NSLocalizedString("tempo", comment: "Count tempo.")): \(String(format: "%.2f", bpm.tempo)) bpm"
+        main.timeLbl.text = "\(NSLocalizedString("time", comment: "Count time.")): \(String(format: "%.3f", (bpm.time/1000)))s"
     }
     
     fileprivate func resetFields() {
-        main.startBtn.setTitle("Start", for: .normal)
-        main.tapsLbl.text = "Taps: 0"
-        main.tempoLbl.text = "Tempo: 0 bpm"
-        main.timeLbl.text = "Time: 0ms"
+        main.startBtn.setTitle(NSLocalizedString("start", comment: "Start the counter."), for: .normal)
+        main.tapsLbl.text = "\(NSLocalizedString("taps", comment: "Count taps.")): 0"
+        main.tempoLbl.text = "\(NSLocalizedString("tempo", comment: "Count tempo.")): 0 bpm"
+        main.timeLbl.text = "\(NSLocalizedString("time", comment: "Count time.")): 0ms"
     }
 }
 
