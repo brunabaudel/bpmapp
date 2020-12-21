@@ -1,12 +1,11 @@
 //
 //  BPMManager.swift
-//  Timer
+//  BPM
 //
 //  Created by Bruna Baudel on 12/17/20.
 //
 
 import Foundation
-import QuartzCore
 
 class BPMManager {
     private static let MILLISECONDS_IN_A_MINUTE: Float = 60000.0

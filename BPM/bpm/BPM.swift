@@ -1,6 +1,6 @@
 //
 //  BPM.swift
-//  Timer
+//  BPM
 //
 //  Created by Bruna Baudel on 12/15/20.
 //

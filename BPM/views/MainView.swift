@@ -1,6 +1,6 @@
 //
 //  MainView.swift
-//  Timer
+//  BPM
 //
 //  Created by Bruna Baudel on 10/18/20.
 //
