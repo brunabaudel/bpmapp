@@ -10,12 +10,15 @@
 		4CED74682590D92E00791D96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CED74672590D92E00791D96 /* AppDelegate.swift */; };
 		4CED746A2590D92E00791D96 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CED74692590D92E00791D96 /* SceneDelegate.swift */; };
 		4CED746C2590D92E00791D96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CED746B2590D92E00791D96 /* ViewController.swift */; };
-		4CED746F2590D92E00791D96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CED746D2590D92E00791D96 /* Main.storyboard */; };
 		4CED74722590D92E00791D96 /* BPM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4CED74702590D92E00791D96 /* BPM.xcdatamodeld */; };
-		4CED74742590D93000791D96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CED74732590D93000791D96 /* Assets.xcassets */; };
-		4CED74772590D93000791D96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CED74752590D93000791D96 /* LaunchScreen.storyboard */; };
 		4CED74822590D93000791D96 /* BPMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CED74812590D93000791D96 /* BPMTests.swift */; };
 		4CED748D2590D93000791D96 /* BPMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CED748C2590D93000791D96 /* BPMUITests.swift */; };
+		4CED74A82590D9C800791D96 /* BPM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CED74A72590D9C800791D96 /* BPM.swift */; };
+		4CED74A92590D9C800791D96 /* BPMManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CED74A62590D9C800791D96 /* BPMManager.swift */; };
+		4CED74B22590D9F100791D96 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CED74B12590D9F100791D96 /* MainView.swift */; };
+		4CED74BC2590DA1500791D96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CED74B72590DA1500791D96 /* Assets.xcassets */; };
+		4CED74BD2590DA1500791D96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CED74B82590DA1500791D96 /* LaunchScreen.storyboard */; };
+		4CED74BE2590DA1500791D96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CED74BA2590DA1500791D96 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +43,7 @@
 		4CED74672590D92E00791D96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CED74692590D92E00791D96 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4CED746B2590D92E00791D96 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4CED746E2590D92E00791D96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4CED74712590D92E00791D96 /* BPM.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BPM.xcdatamodel; sourceTree = "<group>"; };
-		4CED74732590D93000791D96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4CED74762590D93000791D96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4CED74782590D93000791D96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CED747D2590D93000791D96 /* BPMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BPMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CED74812590D93000791D96 /* BPMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPMTests.swift; sourceTree = "<group>"; };
@@ -51,6 +51,12 @@
 		4CED74882590D93000791D96 /* BPMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BPMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CED748C2590D93000791D96 /* BPMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPMUITests.swift; sourceTree = "<group>"; };
 		4CED748E2590D93000791D96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CED74A62590D9C800791D96 /* BPMManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPMManager.swift; sourceTree = "<group>"; };
+		4CED74A72590D9C800791D96 /* BPM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPM.swift; sourceTree = "<group>"; };
+		4CED74B12590D9F100791D96 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		4CED74B72590DA1500791D96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4CED74B92590DA1500791D96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4CED74BB2590DA1500791D96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +109,13 @@
 			children = (
 				4CED74672590D92E00791D96 /* AppDelegate.swift */,
 				4CED74692590D92E00791D96 /* SceneDelegate.swift */,
-				4CED746B2590D92E00791D96 /* ViewController.swift */,
-				4CED746D2590D92E00791D96 /* Main.storyboard */,
-				4CED74732590D93000791D96 /* Assets.xcassets */,
-				4CED74752590D93000791D96 /* LaunchScreen.storyboard */,
 				4CED74782590D93000791D96 /* Info.plist */,
-				4CED74702590D92E00791D96 /* BPM.xcdatamodeld */,
+				4CED74CF2590F3FF00791D96 /* Base.lproj */,
+				4CED74B62590DA1500791D96 /* resources */,
+				4CED74C52590DA5A00791D96 /* model */,
+				4CED74B02590D9F100791D96 /* views */,
+				4CED74A52590D9C800791D96 /* bpm */,
+				4CED746B2590D92E00791D96 /* ViewController.swift */,
 			);
 			path = BPM;
 			sourceTree = "<group>";
@@ -129,6 +136,48 @@
 				4CED748E2590D93000791D96 /* Info.plist */,
 			);
 			path = BPMUITests;
+			sourceTree = "<group>";
+		};
+		4CED74A52590D9C800791D96 /* bpm */ = {
+			isa = PBXGroup;
+			children = (
+				4CED74A72590D9C800791D96 /* BPM.swift */,
+				4CED74A62590D9C800791D96 /* BPMManager.swift */,
+			);
+			path = bpm;
+			sourceTree = "<group>";
+		};
+		4CED74B02590D9F100791D96 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				4CED74B12590D9F100791D96 /* MainView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		4CED74B62590DA1500791D96 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				4CED74B72590DA1500791D96 /* Assets.xcassets */,
+				4CED74B82590DA1500791D96 /* LaunchScreen.storyboard */,
+				4CED74BA2590DA1500791D96 /* Main.storyboard */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		4CED74C52590DA5A00791D96 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				4CED74702590D92E00791D96 /* BPM.xcdatamodeld */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		4CED74CF2590F3FF00791D96 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base.lproj;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,9 +283,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CED74772590D93000791D96 /* LaunchScreen.storyboard in Resources */,
-				4CED74742590D93000791D96 /* Assets.xcassets in Resources */,
-				4CED746F2590D92E00791D96 /* Main.storyboard in Resources */,
+				4CED74BC2590DA1500791D96 /* Assets.xcassets in Resources */,
+				4CED74BE2590DA1500791D96 /* Main.storyboard in Resources */,
+				4CED74BD2590DA1500791D96 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,8 +310,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CED74A82590D9C800791D96 /* BPM.swift in Sources */,
+				4CED74B22590D9F100791D96 /* MainView.swift in Sources */,
 				4CED746C2590D92E00791D96 /* ViewController.swift in Sources */,
 				4CED74682590D92E00791D96 /* AppDelegate.swift in Sources */,
+				4CED74A92590D9C800791D96 /* BPMManager.swift in Sources */,
 				4CED746A2590D92E00791D96 /* SceneDelegate.swift in Sources */,
 				4CED74722590D92E00791D96 /* BPM.xcdatamodeld in Sources */,
 			);
@@ -300,20 +352,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4CED746D2590D92E00791D96 /* Main.storyboard */ = {
+		4CED74B82590DA1500791D96 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4CED746E2590D92E00791D96 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		4CED74752590D93000791D96 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4CED74762590D93000791D96 /* Base */,
+				4CED74B92590DA1500791D96 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		4CED74BA2590DA1500791D96 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CED74BB2590DA1500791D96 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -370,7 +422,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -425,7 +477,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
