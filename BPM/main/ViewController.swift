@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
-    var bpmManager: BPMManager = BPMManager()
+    private var bpmManager: BPMManager = BPMManager()
+    private let cdBPMManager = (UIApplication.shared.delegate as? AppDelegate)?.cdBPMManager
     
     let main: MainView = {
         let view = MainView()
@@ -18,6 +20,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.cdBPMManager?.fetchedResultController.delegate = self
+        
         setupNavigationController()
         addSubviews()
         setupViews()
@@ -25,6 +30,7 @@ class ViewController: UIViewController {
 }
 
 // MARK: - Setup
+
 extension ViewController {
     func setupViews() {
         main.startBtn.addTarget(self, action: #selector(start), for: .touchUpInside)
@@ -35,6 +41,7 @@ extension ViewController {
 }
 
 // MARK: - Actions
+
 extension ViewController {
     @objc func start() {
         bpmManager.recordTime()
@@ -71,23 +78,35 @@ extension ViewController {
 }
 
 // MARK: - NavigationController
+
 extension ViewController {
     func setupNavigationController() {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.navigationBar.tintColor = .white
         
         let saveBtn = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(save))
-        saveBtn.tintColor = .white
-        self.navigationItem.rightBarButtonItem = saveBtn
+        let showBtn = UIBarButtonItem(barButtonSystemItem: .organize, target: self, action: #selector(display))
+        self.navigationItem.rightBarButtonItems = [showBtn, saveBtn]
     }
     
     @objc func save() {
-        print("save")
+        guard let bpm = bpmManager.bpm else {
+            return
+        }
+        self.cdBPMManager?.add(bpm)
+    }
+    
+    @objc func display() {
+        let listViewController = ListViewController()
+        self.navigationController?.pushViewController(listViewController, animated: true)
     }
 }
 
 // MARK: - AutoLayout
+
 extension ViewController {
     func addSubviews() {
         view.addSubview(main)
@@ -101,5 +120,10 @@ extension ViewController {
             main.widthAnchor.constraint(equalTo: view.widthAnchor),
             main.heightAnchor.constraint(equalTo: view.heightAnchor),
         ])
+    }
+}
+
+extension ViewController: NSFetchedResultsControllerDelegate {
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
     }
 }
