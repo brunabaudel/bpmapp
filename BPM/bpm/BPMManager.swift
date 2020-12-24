@@ -15,6 +15,12 @@ class BPMManager {
         self.bpm = BPM.init()
     }
     
+    func saveTitle(_ title: String) {
+        if let bpm = self.bpm {
+            bpm.title(title)
+        }
+    }
+    
     func recordTime() {
         if let bpm = self.bpm {
             let curr = Int64(Date().timeIntervalSince1970 * 1000.0)

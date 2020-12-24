@@ -8,6 +8,7 @@
 import Foundation
 
 class BPM {
+    private(set) var title: String
     private(set) var times: [Int64]
     private(set) var tempo: Float
     private(set) var taps: Int
@@ -18,6 +19,11 @@ class BPM {
         self.taps = 0
         self.tempo = 0.0
         self.time = 0.0
+        self.title = ""
+    }
+    
+    func title(_ title: String) {
+        self.title = title
     }
     
     func recordTimes(_ time: Int64) {
