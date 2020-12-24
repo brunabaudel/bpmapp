@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class MainView: UIView {
+class MainView: BaseView {
     let vStack: UIStackView = {
         let stack = UIStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false
@@ -71,47 +71,12 @@ class MainView: UIView {
         return label
     }()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func layoutSubviews() {
-        self.setupViews()
-        self.addSubviews()
-    }
-    
-    @objc func doneAction() {
-        print("done")
-    }
-}
-
-// MARK: - Setup
-
-extension MainView {
-    func setupViews() {
+    override func setupViews() {
         self.backgroundColor = .black
+        super.setupViews()
     }
     
-    func formatTittleButton(str: String, ext: String) {
-        let mutableAttributedString = NSMutableAttributedString()
-        let str = NSAttributedString(string: str,
-                                     attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 48)])
-        let ext = NSAttributedString(string: ext,
-                                     attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 19)])
-        mutableAttributedString.append(str)
-        mutableAttributedString.append(ext)
-        startBtn.setAttributedTitle(mutableAttributedString, for: .normal)
-    }
-}
-
-// MARK: - AutoLayout
-extension MainView {
-    
-    func addSubviews() {
+    override func addSubviews() {
         vStack2.addArrangedSubview(tapsLbl)
         vStack2.addArrangedSubview(tempoLbl)
         vStack2.addArrangedSubview(timeLbl)
@@ -122,27 +87,31 @@ extension MainView {
         vStack.addArrangedSubview(resetBtn)
         
         addSubview(vStack)
-        self.setupAutoLayout()
+        super.addSubviews()
     }
     
-    fileprivate func setupAutoLayout() {
-        if #available(iOS 11.0, *) {
-            NSLayoutConstraint.activate([
-                vStack.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-                vStack.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
-            ])
-        } else {
-            NSLayoutConstraint.activate([
-                vStack.topAnchor.constraint(equalTo: topAnchor),
-                vStack.bottomAnchor.constraint(equalTo: bottomAnchor),
-            ])
-        }
-        
+    override func setupAutoLayout() {
         NSLayoutConstraint.activate([
+            vStack.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            vStack.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
             vStack.centerXAnchor.constraint(equalTo: centerXAnchor),
             vStack.widthAnchor.constraint(equalTo: widthAnchor),
             
             startBtn.heightAnchor.constraint(equalTo: vStack.heightAnchor, multiplier: 0.4),
         ])
+        super.setupAutoLayout()
+    }
+}
+
+extension MainView {
+    func formatTittleButton(str: String, ext: String) {
+        let mutableAttributedString = NSMutableAttributedString()
+        let str = NSAttributedString(string: str,
+                                     attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 48)])
+        let ext = NSAttributedString(string: ext,
+                                     attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 19)])
+        mutableAttributedString.append(str)
+        mutableAttributedString.append(ext)
+        startBtn.setAttributedTitle(mutableAttributedString, for: .normal)
     }
 }
