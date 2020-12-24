@@ -10,9 +10,9 @@
 		4C0960822593933A002EA98F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0960812593933A002EA98F /* Colors.swift */; };
 		4C09609F259394A4002EA98F /* BPMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C09609D259394A4002EA98F /* BPMTests.swift */; };
 		4C0960A0259394A4002EA98F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C09609E259394A4002EA98F /* Info.plist */; };
+		4C54E46C25942783002A2E51 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C54E46B25942783002A2E51 /* BaseCollectionViewCell.swift */; };
 		4C70F9222593AE97001B1BC3 /* NoResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C70F9212593AE97001B1BC3 /* NoResultsView.swift */; };
 		4C70F9282593AED7001B1BC3 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C70F9272593AED7001B1BC3 /* BaseView.swift */; };
-		4C70F9302593B153001B1BC3 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C70F92F2593B153001B1BC3 /* BaseCollectionViewCell.swift */; };
 		4C70F9492593EEB3001B1BC3 /* BPM_MO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C70F9472593EEB3001B1BC3 /* BPM_MO+CoreDataClass.swift */; };
 		4C70F94A2593EEB3001B1BC3 /* BPM_MO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C70F9482593EEB3001B1BC3 /* BPM_MO+CoreDataProperties.swift */; };
 		4CAD1DEF2593A0850034417E /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAD1DEE2593A0850034417E /* ListCollectionViewCell.swift */; };
@@ -54,9 +54,9 @@
 		4C0960812593933A002EA98F /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		4C09609D259394A4002EA98F /* BPMTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPMTests.swift; sourceTree = "<group>"; };
 		4C09609E259394A4002EA98F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C54E46B25942783002A2E51 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		4C70F9212593AE97001B1BC3 /* NoResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoResultsView.swift; sourceTree = "<group>"; };
 		4C70F9272593AED7001B1BC3 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
-		4C70F92F2593B153001B1BC3 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		4C70F9472593EEB3001B1BC3 /* BPM_MO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BPM_MO+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4C70F9482593EEB3001B1BC3 /* BPM_MO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BPM_MO+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4CAD1DEE2593A0850034417E /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -152,8 +152,8 @@
 		4C70F9262593AEC8001B1BC3 /* commonViews */ = {
 			isa = PBXGroup;
 			children = (
+				4C54E46B25942783002A2E51 /* BaseCollectionViewCell.swift */,
 				4C70F9272593AED7001B1BC3 /* BaseView.swift */,
-				4C70F92F2593B153001B1BC3 /* BaseCollectionViewCell.swift */,
 			);
 			path = commonViews;
 			sourceTree = "<group>";
@@ -377,6 +377,7 @@
 				4C0960822593933A002EA98F /* Colors.swift in Sources */,
 				4CED74682590D92E00791D96 /* AppDelegate.swift in Sources */,
 				4CED74A92590D9C800791D96 /* BPMManager.swift in Sources */,
+				4C54E46C25942783002A2E51 /* BaseCollectionViewCell.swift in Sources */,
 				4CED74F82592ACA400791D96 /* CDBPMManager.swift in Sources */,
 				4CAD1DEF2593A0850034417E /* ListCollectionViewCell.swift in Sources */,
 				4CED746A2590D92E00791D96 /* SceneDelegate.swift in Sources */,
@@ -386,7 +387,6 @@
 				4C70F94A2593EEB3001B1BC3 /* BPM_MO+CoreDataProperties.swift in Sources */,
 				4CED74722590D92E00791D96 /* BPM.xcdatamodeld in Sources */,
 				4C70F9282593AED7001B1BC3 /* BaseView.swift in Sources */,
-				4C70F9302593B153001B1BC3 /* BaseCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

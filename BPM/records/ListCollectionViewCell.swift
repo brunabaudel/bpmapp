@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ListCollectionViewCell: BaseCollectionCell {
+class ListCollectionViewCell: BaseCollectionViewCell {
     
     static let cellReuseIdentifier = "ListCollectionViewCell"
     let vStack: UIStackView = {
